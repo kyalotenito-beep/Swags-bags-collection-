@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swags Bags | Women’s Bags, Totes, Slings &amp; Travel Bags</title>
+<style>
+:root{--bg:#fdf8f6;--card:#fff;--ink:#2d2326;--mute:#7b6b6f;--pink:#d98ba0;--pink-d:#b9667f;--soft:#f7e4e8;--line:#eadcdf;--ok:#3e8a5f;--bad:#b0453f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1719;--card:#292124;--ink:#f5eaed;--mute:#b5a2a7;--soft:#3a2b30;--line:#43353a;--pink:#e29bb0;--pink-d:#e29bb0;--ok:#6cc392;--bad:#e8837d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1719;--card:#292124;--ink:#f5eaed;--mute:#b5a2a7;--soft:#3a2b30;--line:#43353a;--pink:#e29bb0;--pink-d:#e29bb0;--ok:#6cc392;--bad:#e8837d;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+h1,h2,h3,.brand{font-family:Georgia,serif;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.brand{font-size:1.2rem;letter-spacing:.5px;color:var(--pink-d)}
+.cartbtn{background:var(--pink-d);color:#fff;border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+.hero{text-align:center;padding:48px 20px;background:linear-gradient(160deg,var(--soft),var(--bg))}
+.hero.photo{background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),var(--shop) center/cover;color:#fff;padding:90px 20px}.hero.photo p{color:#f3e9ec}
+.hero h1{font-size:clamp(1.8rem,6vw,2.8rem)}
+.hero p{color:var(--mute);max-width:520px;margin:12px auto 20px}
+.cta{display:inline-block;background:var(--pink-d);color:#fff;text-decoration:none;padding:12px 26px;border-radius:999px}
+main{max-width:1050px;margin:0 auto;padding:24px 16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
+.tabs button{white-space:nowrap;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;cursor:pointer}
+.tabs button.on{background:var(--pink-d);color:#fff;border-color:var(--pink-d)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.img{aspect-ratio:1/1;background:linear-gradient(135deg,var(--soft),var(--line));display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.img img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;top:10px;left:10px;font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--card);font-family:system-ui,sans-serif}
+.in{color:var(--ok)}.out{color:var(--bad)}
+.info{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info small{color:var(--mute);font-family:system-ui,sans-serif}
+.price{font-size:1.15rem;color:var(--pink-d);font-weight:bold}
+.add{margin-top:auto;border:0;background:var(--ink);color:var(--bg);border-radius:8px;padding:10px;cursor:pointer}
+.add:disabled{opacity:.4;cursor:not-allowed}
+.info-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:40px 0}
+.info-band div{background:var(--soft);border-radius:14px;padding:18px}
+footer{text-align:center;color:var(--mute);padding:28px 16px;border-top:1px solid var(--line);font-size:.9rem}
+#drawer{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:20;justify-content:flex-end}
+#drawer.open{display:flex}
+.panel{background:var(--bg);width:min(440px,100%);height:100%;overflow-y:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.row .n{flex:1}
+.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer}
+.panel label{display:block;margin-top:10px;font-size:.9rem;font-family:system-ui,sans-serif}
+.panel input,.panel select,.panel textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--card);margin-top:4px}
+.total{display:flex;justify-content:space-between;font-size:1.2rem;margin:14px 0}
+.send{display:grid;gap:8px;margin-top:14px}
+.send button{border:0;border-radius:8px;padding:12px;cursor:pointer;color:#fff}
+.wa{background:#25a15a}.em{background:var(--pink-d)}
+.x{float:right;background:none;border:0;font-size:1.6rem;cursor:pointer}
+#msg{color:var(--bad);font-family:system-ui,sans-serif;font-size:.9rem;min-height:1.2em}
+</style>
+</head>
+<body>
+<header><span class="brand">Swags Bags</span><button class="cartbtn" id="open">Cart (<span id="cnt">0</span>)</button></header>
+
+<section class="hero" id="hero">
+<h1>Carry your style, everywhere.</h1>
+<p>Women’s bags, totes, slings and travel bags, delivered countrywide from our Nairobi CBD shop.</p>
+<a class="cta" href="#shop">Shop the collection</a>
+</section>
+
+<main id="shop">
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="grid"></div>
+
+<div class="info-band">
+<div><h3>Countrywide delivery</h3><p>We deliver to every county in Kenya. Flat delivery fee of $3 for each item ordered.</p></div>
+<div><h3>Visit our shop</h3><p>Meta Plaza, 3rd Floor, Shop D15, Nairobi CBD.</p></div>
+<div><h3>Easy payment</h3><p>Pay on delivery, M-Pesa or card. We confirm your choice when we contact you.</p></div>
+</div>
+</main>
+
+<footer>© Swags Bags · Meta Plaza, 3rd Floor, Shop D15, Nairobi CBD</footer>
+
+<div id="drawer"><div class="panel">
+<button class="x" id="close" aria-label="Close">×</button>
+<h2>Your cart</h2>
+<div id="items"></div>
+<div class="row"><span class="n">Subtotal</span><strong id="sub">$0.00</strong></div>
+<div class="row"><span class="n">Delivery ($3 per item)</span><strong id="del">$0.00</strong></div>
+<div class="total"><span>Total (USD)</span><strong id="tot">$0.00</strong></div>
+<h3>Delivery details</h3>
+<label>Full name<input id="f-name" autocomplete="name"></label>
+<label>Phone<input id="f-phone" type="tel" autocomplete="tel"></label>
+<label>Email<input id="f-email" type="email" autocomplete="email"></label>
+<label>Town / county and delivery address<textarea id="f-addr" rows="2"></textarea></label>
+<label>Payment method<select id="f-pay"><option>Pay on delivery</option><option>M-Pesa</option><option>Card / online</option></select></label>
+<div id="msg"></div>
+<div class="send">
+<button class="wa" id="sendwa">Place order via WhatsApp</button>
+<button class="em" id="sendem">Place order via Email</button>
+</div>
+</div></div>
+
+<script>
+// ===== SHOP SETTINGS: edit these =====
+var WHATSAPP = "254700000000"; // shop number, country code first, no + sign
+var EMAIL = "orders@example.com";
+var SHOP_IMAGE = "images/shop.jpg"; // photo of your shop for the top banner
+var DELIVERY_PER_ITEM = 3; // USD, charged for each item ordered
+// ===== PRODUCTS: change names and prices, photos go in the images folder =====
+var PRODUCTS = [
+{id:1,name:"Blush Leather Handbag",cat:"Women’s Bags",price:45,stock:true,icon:"👜",img:"images/bag1.jpg"},
+{id:2,name:"Classic Top-Handle Bag",cat:"Women’s Bags",price:52,stock:true,icon:"👜",img:"images/bag2.jpg"},
+{id:3,name:"Mini Evening Bag",cat:"Women’s Bags",price:30,stock:false,icon:"👛",img:"images/bag3.jpg"},
+{id:4,name:"Canvas Everyday Tote",cat:"Tote Bags",price:28,stock:true,icon:"🛍️",img:"images/bag4.jpg"},
+{id:5,name:"Large Shopper Tote",cat:"Tote Bags",price:35,stock:true,icon:"🛍️",img:"images/bag5.jpg"},
+{id:6,name:"Crossbody Sling Bag",cat:"Sling Bags",price:25,stock:true,icon:"🎒",img:"images/bag6.jpg"},
+{id:7,name:"Chain Strap Sling",cat:"Sling Bags",price:32,stock:false,icon:"🎒",img:"images/bag7.jpg"},
+{id:8,name:"Weekend Travel Duffel",cat:"Travelling Bags",price:60,stock:true,icon:"🧳",img:"images/bag8.jpg"},
+{id:9,name:"Rolling Travel Bag",cat:"Travelling Bags",price:85,stock:true,icon:"🧳",img:"images/bag9.jpg"}
+];
+// =====================================
+var cats=["All"].concat(PRODUCTS.map(function(p){return p.cat}).filter(function(c,i,a){return a.indexOf(c)===i}));
+var cat="All",cart={};
+function $(i){return document.getElementById(i)}
+function usd(n){return "$"+n.toFixed(2)}
+function drawTabs(){$("tabs").innerHTML=cats.map(function(c){return '<button class="'+(c===cat?"on":"")+'" data-c="'+c+'">'+c+'</button>'}).join("");
+ Array.prototype.forEach.call($("tabs").children,function(b){b.onclick=function(){cat=b.getAttribute("data-c");drawTabs();drawGrid()}})}
+function drawGrid(){
+ $("grid").innerHTML=PRODUCTS.filter(function(p){return cat==="All"||p.cat===cat}).map(function(p){
+  var im=p.img?'<img src="'+p.img+'" alt="'+p.name+'">':p.icon;
+  return '<div class="card"><div class="img">'+im+'<span class="badge '+(p.stock?"in":"out")+'">'+(p.stock?"In stock":"Out of stock")+'</span></div><div class="info"><small>'+p.cat+'</small><strong>'+p.name+'</strong><span class="price">'+usd(p.price)+'</span><button class="add" data-id="'+p.id+'" '+(p.stock?"":"disabled")+'>'+(p.stock?"Add to cart":"Out of stock")+'</button></div></div>'}).join("");
+ Array.prototype.forEach.call(document.querySelectorAll(".add"),function(b){b.onclick=function(){var id=b.getAttribute("data-id");cart[id]=(cart[id]||0)+1;drawCart();$("drawer").classList.add("open")}})}
+function find(id){return PRODUCTS.filter(function(p){return String(p.id)===String(id)})[0]}
+function count(){var n=0;for(var id in cart){n+=cart[id]}return n}
+function delivery(){return count()*DELIVERY_PER_ITEM}
+function total(){var t=0;for(var id in cart){t+=find(id).price*cart[id]}return t+delivery()}
+function drawCart(){
+ var ids=Object.keys(cart),n=0;ids.forEach(function(i){n+=cart[i]});$("cnt").textContent=n;
+ $("items").innerHTML=ids.length?ids.map(function(id){var p=find(id);return '<div class="row"><div class="n"><strong>'+p.name+'</strong><br><small>'+usd(p.price)+' each</small></div><div class="q"><button data-d="-1" data-id="'+id+'">−</button> <span>'+cart[id]+'</span> <button data-d="1" data-id="'+id+'">+</button></div><strong>'+usd(p.price*cart[id])+'</strong></div>'}).join(""):"<p>Your cart is empty.</p>";
+ Array.prototype.forEach.call($("items").querySelectorAll("button"),function(b){b.onclick=function(){var id=b.getAttribute("data-id");cart[id]+=Number(b.getAttribute("data-d"));if(cart[id]<=0)delete cart[id];drawCart()}});
+ $("sub").textContent=usd(total()-delivery());$("del").textContent=usd(delivery());$("tot").textContent=usd(total())}
+function order(){
+ var nm=$("f-name").value.trim(),ph=$("f-phone").value.trim(),ad=$("f-addr").value.trim();
+ if(!Object.keys(cart).length){$("msg").textContent="Your cart is empty.";return null}
+ if(!nm||!ph||!ad){$("msg").textContent="Please fill in your name, phone and delivery address.";return null}
+ $("msg").textContent="";
+ var lines=Object.keys(cart).map(function(id){var p=find(id);return "- "+cart[id]+" x "+p.name+" ("+usd(p.price)+" each) = "+usd(p.price*cart[id])});
+ return "New order, Swags Bags\n\n"+lines.join("\n")+"\n\nDelivery ("+count()+" items x "+usd(DELIVERY_PER_ITEM)+"): "+usd(delivery())+"\nTotal: "+usd(total())+"\n\nName: "+nm+"\nPhone: "+ph+"\nEmail: "+$("f-email").value.trim()+"\nDelivery: "+ad+"\nPayment: "+$("f-pay").value}
+$("sendwa").onclick=function(){var t=order();if(t)window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t),"_blank")};
+$("sendem").onclick=function(){var t=order();if(t)window.location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("New order from "+$("f-name").value.trim())+"&body="+encodeURIComponent(t)};
+$("open").onclick=function(){$("drawer").classList.add("open")};
+$("close").onclick=function(){$("drawer").classList.remove("open")};
+$("drawer").onclick=function(e){if(e.target===$("drawer"))$("drawer").classList.remove("open")};
+if(SHOP_IMAGE){var h=$("hero");h.className="hero photo";h.style.setProperty("--shop","url('"+SHOP_IMAGE+"')")}
+drawTabs();drawGrid();drawCart();
+</script>
+</body>
+</html>
